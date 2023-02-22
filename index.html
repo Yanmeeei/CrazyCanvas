@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=1920 height=1080></canvas>
+      <canvas id="unity-canvas" width=960 height=540></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -56,11 +56,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/p2_gold.loader.js";
+      var loaderUrl = buildUrl + "/p2_gold_v2.loader.js";
       var config = {
-        dataUrl: buildUrl + "/p2_gold.data",
-        frameworkUrl: buildUrl + "/p2_gold.framework.js",
-        codeUrl: buildUrl + "/p2_gold.wasm",
+        dataUrl: buildUrl + "/p2_gold_v2.data.gz",
+        frameworkUrl: buildUrl + "/p2_gold_v2.framework.js.gz",
+        codeUrl: buildUrl + "/p2_gold_v2.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Playground",
@@ -93,8 +93,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "1920px";
-        canvas.style.height = "1080px";
+        canvas.style.width = "960px";
+        canvas.style.height = "540px";
       }
 
       loadingBar.style.display = "block";
